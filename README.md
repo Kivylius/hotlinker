@@ -1,6 +1,6 @@
 # 🔌 hotlinker
 
-This is a starting repo to create plugins for the webdeck web app. Everything is set up in this template to get started. Press the `Use this Template` to create a new plugin.
+This is a starting repo to create plugins for the webdeck web app. Everything is set up in this template to get started. Press the `Use this Template` to create a new plugin
 
 ## Usage
 
