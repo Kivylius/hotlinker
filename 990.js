@@ -1,4 +1,4 @@
-(self['webpackChunkwebdeck_plugin_template'] = self['webpackChunkwebdeck_plugin_template'] || []).push([["990"], {
+(self['webpackChunkhotlinker'] = self['webpackChunkhotlinker'] || []).push([["990"], {
 "251": (function (__unused_webpack_module, exports, __webpack_require__) {
 /**
  * @license React
@@ -70,7 +70,7 @@ var App = function(props) {
             color: "white"
         },
         children: /*#__PURE__*/ (0, react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("div", {
-            children: "hello from webdeck-plugin-template"
+            children: "hello from hotlinker"
         })
     });
 };
