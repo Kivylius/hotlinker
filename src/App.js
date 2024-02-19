@@ -16,7 +16,7 @@ const App = (props) => {
         color: 'white',
       }}
     >
-      <div>hello from webdeck-plugin-template</div>
+      <div>hello from hotlinker</div>
     </div>
   )
 };
