@@ -1,22 +1,32 @@
 import React from 'react';
 
-export const onPress = (params) => {
-  alert("on Press from plugin!");
-  console.log("on press pressed", {params});
+export const onPress = ({ config }) => {
+  if(config.link) {
+    window.open(config.link, "_blank");
+  }
 }
 
-const App = (props) => {
-  console.log("App render", {props});
+const styles = {
+  borderRadius: '4px',
+  padding: '2em',
+  backgroundColor: 'green',
+  color: 'white',
+}
+
+const App = ({ config, setConfig }) => {
   return (
-    <div
-      style={{
-        borderRadius: '4px',
-        padding: '2em',
-        backgroundColor: 'red',
-        color: 'white',
-      }}
-    >
-      <div>hello from hotlinker</div>
+    <div style={styles} >
+      <h3>hotlinker plugin</h3>
+      <div className="setting">
+        <label htmlFor="link">link: </label>
+        <input 
+          type="text" 
+          name="link" 
+          placeholder="http://" 
+          onChange={(e) => setConfig({ link: e.target.value }) } 
+          value={config.link || ""} 
+        />
+      </div>
     </div>
   )
 };
