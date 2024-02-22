@@ -52,26 +52,45 @@ __webpack_require__.d(__webpack_exports__, {
 /* harmony import */var react__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_1__);
 
 
- var onPress = function(params) {
-    alert("on Press from plugin!");
-    console.log("on press pressed", {
-        params: params
-    });
+ var onPress = function(param) {
+    var config = param.config;
+    if (config.link) window.open(config.link, "_blank");
 };
-var App = function(props) {
-    console.log("App render", {
-        props: props
-    });
-    return /*#__PURE__*/ (0, react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("div", {
-        style: {
-            borderRadius: "4px",
-            padding: "2em",
-            backgroundColor: "red",
-            color: "white"
-        },
-        children: /*#__PURE__*/ (0, react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("div", {
-            children: "hello from hotlinker"
-        })
+var styles = {
+    borderRadius: "4px",
+    padding: "2em",
+    backgroundColor: "green",
+    color: "white"
+};
+var App = function(param) {
+    var config = param.config, setConfig = param.setConfig;
+    return /*#__PURE__*/ (0, react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("div", {
+        style: styles,
+        children: [
+            /*#__PURE__*/ (0, react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("h3", {
+                children: "hotlinker plugin"
+            }),
+            /*#__PURE__*/ (0, react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("div", {
+                className: "setting",
+                children: [
+                    /*#__PURE__*/ (0, react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("label", {
+                        htmlFor: "link",
+                        children: "link: "
+                    }),
+                    /*#__PURE__*/ (0, react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("input", {
+                        type: "text",
+                        name: "link",
+                        placeholder: "http://",
+                        onChange: function(e) {
+                            return setConfig({
+                                link: e.target.value
+                            });
+                        },
+                        value: config.link || ""
+                    })
+                ]
+            })
+        ]
     });
 };
 var __WEBPACK_DEFAULT_EXPORT__ = App;
