@@ -16,7 +16,7 @@ const styles = {
 const App = ({ config, setConfig }) => {
   return (
     <div style={styles} >
-      <h3>hotlinker plugin</h3>
+      <h3>Hotlinker Plugin</h3>
       <div className="setting">
         <label htmlFor="link">link: </label>
         <input 
